@@ -1,0 +1,155 @@
+/* Estilos generales */
+
+body {
+    background-image: url('/imagenes/fondo3.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+/* Estilos generales para el encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    margin: 10;
+    font-family: 'Nombre de la Fuente', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  /* Estilos para el menú de navegación */
+  .menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu li {
+    margin: 0 15px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .menu a:hover {
+    color: #886904;
+  }
+  
+  /* Estilos para los logotipos */
+  .logo-left img,
+  .logo-right img {
+    width: 90px;
+  }
+  
+  /* Estilos del contenido principal */  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .productos {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    image-orientation: from-image;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .producto {
+    flex: 0 1 calc(28.00% - 50px);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+  }
+  
+  .producto img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  /* Estilos del formulario de contacto */  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #555;
+  }
+
+  #contacto {
+    text-align: center;
+  }
+  
+  #contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  #contacto label,
+  #contacto input,
+  #contacto textarea,
+  #contacto button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  #contacto button {
+    width: auto;
+    padding: 8px 16px;
+  }
+  
+  /* Estilos del pie de página */  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+  }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Tienda de Telas</title>    
+  </head>
+  <body class="index-page">
+    <header>
+      <div class="logo-left">
+        <a href="index.html"
+          ><img src="imagenes/Logo1.jpg" alt="Logo Izquierdo"
+        /></a>
+      </div>
+      <div class="center-content">
+        <h1>Caro-lana</h1>
+        <nav>
+          <ul class="menu">
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="logo-right">
+        <a href="registro.html"
+          ><img src="imagenes/Logo2.jpg" alt="Logo Izquierdo"
+        /></a>
+      </div>
+    </header>
+
+    <main>
+      <section id="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="productos">
+          <div class="producto">
+            <img src="imagenes/tela1.jpg" alt="Tela 1" />
+            <h3>Tela para todo tipo de prendas</h3>
+            <p>
+              Es empleada en el mundo de la moda y textil para la creación de
+              todo tipo de prendas, accesorios, artículos para el hogar y uso
+              diario, eventos, entre otros.
+            </p>
+          </div>
+          <div class="producto">
+            <img src="imagenes/tela2.jpg" alt="Tela 2" />
+            <h3>Gran variedad de colores</h3>
+            <p>
+              Material tela 100% poliéster con una variedad de colores, ideal
+              para mantelería, servilletas, uniformes escolares, pantalones
+            </p>
+          </div>
+          <div class="producto">
+            <img src="imagenes/amirugumi.jpg" alt="amirugumi 1" />
+            <h3>Tela 2</h3>
+            <p>Descripción de la tela 2...</p>
+          </div>
+          <div class="producto">
+            <img src="imagenes/amirugumi2.jpg" alt="amirugumi 2" />
+            <h3>Tela 2</h3>
+            <p>Descripción de la tela 2...</p>
+          </div>
+          <div class="producto">
+            <img src="imagenes/lanas1.jpg" alt="lanas 1" />
+            <h3>Tela 2</h3>
+            <p>Descripción de la tela 2...</p>
+          </div>
+          <div class="producto">
+            <img src="imagenes/lanas2.jpg" alt="lanas 2" />
+            <h3>Tela 2</h3>
+            <p>Descripción de la tela 2...</p>
+          </div>
+          <!-- Agrega más productos aquí -->
+        </div>
+      </section>
+
+      <section id="nosotros">
+        <h2>Sobre Nosotros...</h2>
+        <p>
+          Con una rica herencia arraigada en la tradición textil, somos una
+          tienda especializada en telas de alta calidad. Desde nuestros inicios,
+          nos hemos dedicado a ofrecer una amplia gama de opciones para tus
+          proyectos creativos. Descubre nuestra selección cuidadosamente curada,
+          fusionando la elegancia atemporal, la durabilidad artesanal y el
+          estilo distintivo en cada tejido que ofrecemos. Nuestra historia está
+          tejida con el compromiso de brindarte lo mejor en cada fibra, honrando
+          la artesanía y la pasión por las telas de calidad.
+        </p>
+      </section>
+
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Ponte en contacto con nosotros a través de...</p>
+        <form onsubmit="event.preventDefault(); crearRegistro();">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br />
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" required></textarea><br />
+
+          <button type="submit">Enviar Mensaje</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Derechos Reservados &copy; 2023 Tienda de Telas</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      function mensaje() {
+        alert("Registro enviado");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/76c78153ad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/stylesregedit.css" />
+    <title>Registro de Usuarios</title>
+  </head>
+  <body class="registro-page">
+    <header>
+      <div class="logo-left">
+        <a href="index.html"
+          ><img src="imagenes/Logo1.jpg" alt="Logo Izquierdo"
+        /></a>
+      </div>
+      <div class="center-content">
+        <h1>Caro-lana</h1>
+        <nav>
+          <ul class="menu">
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="logo-right">
+        <a href="registro.html"
+          ><img src="imagenes/Logo2.jpg" alt="Logo Izquierdo"
+        /></a>
+      </div>
+    </header>
+    <div class="container-fluid row">
+      <form action="/crud/crud.php" method="post" class="col-4 p-3">
+        <h3 class="text-center text-secondary">Resgitro de clientes</h3>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Nombres: </label>
+          <input type="text" class="form-control" name="nombre" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Apellidos: </label>
+          <input type="text" class="form-control" name="Apellidos" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">DNI: </label>
+          <input type="text" class="form-control" name="dni" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Fecha de nacimiento:
+          </label>
+          <input type="date" class="form-control" name="fecha" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email: </label>
+          <input type="text" class="form-control" name="email" />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          name="btnregistrar"
+          value="ok"
+        >
+          Registrar
+        </button>
+      </form>
+      <div class="col-8 p-4">
+        <table class="table">
+          <thead class="bg-info">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">DNI</th>
+              <th scope="col">Fecha de nacimiento</th>
+              <th scope="col">Email</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+    <?php
+    include "/db/conexion.php";
+    $sql = $conexion->query("SELECT * FROM clientes"); // Con paréntesis de cierre
+    while ($datos = $sql -> fetch_object()) {
+    ?>
+        <tr>
+            <td><?php echo $datos->ID; ?></td>
+            <td><?php echo $datos->nombre; ?></td>
+            <td><?php echo $datos->Apellidos; ?></td>
+            <td><?php echo $datos->dni; ?></td>
+            <td><?php echo $datos->fecha; ?></td>
+            <td><?php echo $datos->email; ?></td>
+            <td>
+                <a href="" class="btn btn-small btn-warning">
+                    <i class="fa-solid fa-pen"></i>
+                </a>
+                <a href="" class="btn btn-small btn-danger">
+                    <i class="fa-solid fa-trash-can"></i>
+                </a>
+            </td>
+        </tr>
+    <?php
+    }
+    ?>
+</tbody>
+        </table>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
